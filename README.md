@@ -48,7 +48,7 @@
 
 - 第 5 期: [AI个性化学习：机遇挑战](weekly_reports/第5期_AI个性化学习：机遇挑战.md)
 
-- 第 4 期: [智慧教学：革命还是泡沫？](weekly_reports/第4期_智慧教学：革命还是泡沫？_.md)
+- 第 4 期: [智慧教学：革命还是泡沫？](weekly_reports/第4期_智慧教学：革命还是泡沫？.md)
 
 - 第 3 期: [职场_AI_Agent_深度研究](weekly_reports/第3期_职场_AI_Agent_深度研究_.md)
 
