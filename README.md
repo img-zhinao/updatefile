@@ -52,7 +52,7 @@
 
 - 第 3 期: [职场_AI_Agent_深度研究](weekly_reports/第3期_职场_AI_Agent_深度研究_.md)
 
-- 第 2 期: [AI智能体资本化路径分析](weekly_reports/第2期_AI智能体资本化路径分析.md)
+- 第 2 期: [AI智能体资本化路径分析](weekly_reports/第2期_AI_Agent_就业影响分析.md)
 
 - 第 1 期: [DEEPSEEK一体机研报深度分析](weekly_reports/第1期_DEEPSEEK一体机研报深度分析.md)
 
