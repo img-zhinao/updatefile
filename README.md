@@ -16,7 +16,7 @@
 
 - 第 21 期: [AI Agent 证券化研究](https://github.com/img-zhinao/weekly/blob/main/weekly_reports/第21期_AI Agent 证券化研究.md)
 
-- 第 20 期: [AI智能体资本化路径分析](https://github.com/img-zhinao/weekly/blob/main/weekly_reports/第20期_AI智能体资本化路径分析.md)
+- 第 20 期: [AI智能体资本化路径分析](weekly_reports/第20期_AI智能体资本化路径分析.md)
 
 - 第 19 期: [智能体资产化：概念、模式、挑战与前景深度解析](https://github.com/img-zhinao/weekly/blob/main/weekly_reports/第19期_智能体资产化：概念、模式、挑战与前景深度解析.md)
 
