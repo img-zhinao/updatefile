@@ -54,7 +54,7 @@
 
 - 第 2 期: [AI智能体资本化路径分析](weekly_reports/第2期_AI智能体资本化路径分析.md)
 
-- 第 1 期: [DEEPSEEK一体机研报深度分析](weekly_reports/第4期_DEEPSEEK一体机研报深度分析_.md)
+- 第 1 期: [DEEPSEEK一体机研报深度分析](weekly_reports/第1期_DEEPSEEK一体机研报深度分析_.md)
 
 
 
