@@ -14,47 +14,47 @@
 
 **四月**
 
-- 第 21 期: [AI Agent 证券化研究](https://github.com/img-zhinao/weekly/blob/main/weekly_reports/第21期_AI Agent 证券化研究.md)
+- 第 21 期: [AI Agent 证券化研究](weekly_reports/第21期_AI Agent 证券化研究.md)
 
 - 第 20 期: [AI智能体资本化路径分析](weekly_reports/第20期_AI智能体资本化路径分析.md)
 
-- 第 19 期: [智能体资产化：概念、模式、挑战与前景深度解析](https://github.com/img-zhinao/weekly/blob/main/weekly_reports/第19期_智能体资产化：概念、模式、挑战与前景深度解析.md)
+- 第 19 期: [智能体资产化：概念、模式、挑战与前景深度解析](weekly_reports/第19期_智能体资产化：概念、模式、挑战与前景深度解析.md)
 
-- 第 18 期: [AI智能体数据交易研究](https://github.com/img-zhinao/weekly/blob/main/weekly_reports/第18期_AI智能体数据交易研究.md)
+- 第 18 期: [AI智能体数据交易研究](weekly_reports/第18期_AI智能体数据交易研究.md)
 
-- 第 17 期: [MCP驱动AI运营分析](https://github.com/img-zhinao/weekly/blob/main/weekly_reports/第17期_MCP驱动AI运营分析.md)
+- 第 17 期: [MCP驱动AI运营分析](weekly_reports/第17期_MCP驱动AI运营分析.md)
 
-- 第 16 期: [AI_Agent_数据流通载体](https://github.com/img-zhinao/weekly/blob/main/weekly_reports/第16期_AI_Agent_数据流通载体.md)
+- 第 16 期: [AI_Agent_数据流通载体](weekly_reports/第16期_AI_Agent_数据流通载体.md)
 
-- 第 15 期: [自制MCP：AI_Agent万能协议](https://github.com/img-zhinao/weekly/blob/main/weekly_reports/第15期_自制MCP：AI_Agent万能协议.md)
+- 第 15 期: [自制MCP：AI_Agent万能协议](weekly_reports/第15期_自制MCP：AI_Agent万能协议.md)
 
-- 第 14 期: [中国闲置房地产利用及展望](https://github.com/img-zhinao/weekly/blob/main/weekly_reports/第14期_中国闲置房地产利用及展望.md)
+- 第 14 期: [中国闲置房地产利用及展望](weekly_reports/第14期_中国闲置房地产利用及展望.md)
 
-- 第 13 期: [io.net_全方位分析](https://github.com/img-zhinao/weekly/blob/main/weekly_reports/第13期_io.net_全方位分析.md)
+- 第 13 期: [io.net_全方位分析](weekly_reports/第13期_io.net_全方位分析.md)
 
-- 第 12 期: [分布式GPU与AI_Agent](https://github.com/img-zhinao/weekly/blob/main/weekly_reports/第12期_分布式GPU与AI_Agent.md)
+- 第 12 期: [分布式GPU与AI_Agent](weekly_reports/第12期_分布式GPU与AI_Agent.md)
 
-- 第 11 期: [RWA培训市场研究](https://github.com/img-zhinao/weekly/blob/main/weekly_reports/第11期_RWA培训市场研究.md)
+- 第 11 期: [RWA培训市场研究](weekly_reports/第11期_RWA培训市场研究.md)
 
-- 第 10 期: [RWA产业金融发展新范式](https://github.com/img-zhinao/weekly/blob/main/weekly_reports/第10期_RWA产业金融发展新范式.md)
+- 第 10 期: [RWA产业金融发展新范式](weekly_reports/第10期_RWA产业金融发展新范式.md)
 
-- 第 9 期: [公共数据资产登记运营](https://github.com/img-zhinao/weekly/blob/main/weekly_reports/第9期_公共数据资产登记运营.md)
+- 第 9 期: [公共数据资产登记运营](weekly_reports/第9期_公共数据资产登记运营.md)
 
-- 第 8 期: [分布式AI算力共享研究](https://github.com/img-zhinao/weekly/blob/main/weekly_reports/第8期_分布式AI算力共享研究.md)
+- 第 8 期: [分布式AI算力共享研究](weekly_reports/第8期_分布式AI算力共享研究.md)
 
-- 第 7 期: [数据资产的战略价值：驱动商业转型与增长的核心引擎](https://github.com/img-zhinao/weekly/blob/main/weekly_reports/第7期_数据资产的战略价值：驱动商业转型与增长的核心引擎.md)
+- 第 7 期: [数据资产的战略价值：驱动商业转型与增长的核心引擎](weekly_reports/第7期_数据资产的战略价值：驱动商业转型与增长的核心引擎.md)
 
-- 第 6 期: [数据资产战略价值调研报告](https://github.com/img-zhinao/weekly/blob/main/weekly_reports/第6期_数据资产战略价值调研报告.md)
+- 第 6 期: [数据资产战略价值调研报告](weekly_reports/第6期_数据资产战略价值调研报告.md)
 
-- 第 5 期: [AI个性化学习：机遇挑战](https://github.com/img-zhinao/weekly/blob/main/weekly_reports/第5期_AI个性化学习：机遇挑战_.md)
+- 第 5 期: [AI个性化学习：机遇挑战](weekly_reports/第5期_AI个性化学习：机遇挑战_.md)
 
-- 第 4 期: [智慧教学：革命还是泡沫？](https://github.com/img-zhinao/weekly/blob/main/weekly_reports/第4期_智慧教学：革命还是泡沫？_.md)
+- 第 4 期: [智慧教学：革命还是泡沫？](weekly_reports/第4期_智慧教学：革命还是泡沫？_.md)
 
-- 第 3 期: [职场_AI_Agent_深度研究](https://github.com/img-zhinao/weekly/blob/main/weekly_reports/第3期_职场_AI_Agent_深度研究_.md)
+- 第 3 期: [职场_AI_Agent_深度研究](weekly_reports/第3期_职场_AI_Agent_深度研究_.md)
 
-- 第 2 期: [AI智能体资本化路径分析](https://github.com/img-zhinao/weekly/blob/main/weekly_reports/第2期_AI智能体资本化路径分析.md)
+- 第 2 期: [AI智能体资本化路径分析](weekly_reports/第2期_AI智能体资本化路径分析.md)
 
-- 第 1 期: [DEEPSEEK一体机研报深度分析](https://github.com/img-zhinao/weekly/blob/main/weekly_reports/第4期_DEEPSEEK一体机研报深度分析_.md)
+- 第 1 期: [DEEPSEEK一体机研报深度分析](weekly_reports/第4期_DEEPSEEK一体机研报深度分析_.md)
 
 
 
