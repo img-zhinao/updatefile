@@ -14,7 +14,7 @@
 
 **四月**
 
-- 第 21 期: [AI Agent 证券化研究](weekly_reports/第21期_AI_Agent证券化研究.md)
+- 第 21 期: [AI Agent 证券化研究](weekly_reports/第21期_AI Agent 证券化研究.md)
 
 - 第 20 期: [AI智能体资本化路径分析](weekly_reports/第20期_AI智能体资本化路径分析.md)
 
