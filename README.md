@@ -14,7 +14,7 @@
 
 - 第 23 期: [中东主权基金与AI智能体](weekly_reports/第23期_中东主权基金与AI智能体.md)
 
-- 第 22 期: [中东主权基金与香港RWA](weekly_reports/第22期_中东基金与香港RWA.md)
+
 
 ## 四月
 
