@@ -67,7 +67,7 @@ def generate_markdown(reports):
 
         # 生成 GitHub 链接
         file_path = Path(REPORT_DIR) / filename
-        file_url = f"https://github.com/img-zhinao/weekly/blob/main/{file_path.as_posix()}"
+        file_url = f"{file_path.as_posix()}"
         markdown += f"- {prefix}[{title}]({file_url})\n"
     return markdown
 
