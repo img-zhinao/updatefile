@@ -1,5 +1,5 @@
 # Workflow 名称
-name: Sync README.md to index.html
+name: Sync README.md to index.html in docs
 
 # 触发 workflow 的事件
 on:
@@ -27,19 +27,23 @@ jobs:
         sudo apt-get update
         sudo apt-get install -y pandoc
 
-    - name: 将 README.md 转换为 index.html
-      # 使用 pandoc 工具将 Markdown 文件转换为 HTML
-      run: |
-        pandoc README.md -s -o index.html
+    - name: 创建 docs 目录 (如果不存在)
+      # 创建 docs 目录，-p 参数确保如果父目录不存在也会一并创建
+      run: mkdir -p docs
 
-    - name: 自动提交并推送 changes 到 index.html
+    - name: 将 README.md 转换为 docs/index.html
+      # 使用 pandoc 工具将 Markdown 文件转换为 HTML，并保存到 docs 文件夹
+      run: |
+        pandoc README.md -s -o docs/index.html
+
+    - name: 自动提交并推送 changes 到 docs/index.html
       # 使用 stefanzweifel/git-auto-commit-action@v5 自动提交生成的 index.html 文件
       uses: stefanzweifel/git-auto-commit-action@v5
       with:
         # 提交消息
-        commit_message: Sync README.md to index.html
-        # 指定要提交的文件，这里是新生成的或修改的 index.html
-        files: index.html
+        commit_message: Sync README.md to docs/index.html
+        # 指定要提交的文件，现在是 docs/index.html
+        files: docs/index.html
         # 可选：设置提交作者信息
         # commit_user_name: Automated Sync
         # commit_user_email: actions@github.com
