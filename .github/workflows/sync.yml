@@ -1,5 +1,5 @@
 # Workflow 名称
-name: Sync README.md to index.html in docs
+name: Sync README.md to index.html in docs and fix links
 
 # 触发 workflow 的事件
 on:
@@ -36,12 +36,60 @@ jobs:
       run: |
         pandoc README.md -s -o docs/index.html
 
+    - name: 设置 Python 环境
+      # 设置 Python 环境以便运行脚本修改链接
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x' # 使用一个近期版本的 Python
+
+    - name: 安装 BeautifulSoup 依赖
+      # 安装用于解析 HTML 的库
+      run: pip install beautifulsoup4
+
+    - name: 创建链接修改脚本文件
+      # 将用于修改链接的 Python 脚本内容写入到一个文件中
+      run: |
+        echo "import sys" > modify_links.py
+        echo "from bs4 import BeautifulSoup" >> modify_links.py
+        echo "" >> modify_links.py
+        echo "file_path = 'docs/index.html'" >> modify_links.py
+        echo "target_url = 'https://github.com/img-zhinao/updatefile/blob/main/README.md'" >> modify_links.py
+        echo "" >> modify_links.py
+        echo "try:" >> modify_links.py
+        echo "    with open(file_path, 'r', encoding='utf-8') as f:" >> modify_links.py
+        echo "        soup = BeautifulSoup(f, 'html.parser')" >> modify_links.py
+        echo "" >> modify_links.py
+        echo "    # 查找所有的 <a> 标签" >> modify_links.py
+        echo "    for a_tag in soup.find_all('a'):" >> modify_links.py
+        echo "        # 修改 href 属性为目标 URL" >> modify_links.py
+        echo "        a_tag['href'] = target_url" >> modify_links.py
+        # 可选：添加 target='_blank' 属性让链接在新标签页打开 (如果需要，请取消下面一行的注释)
+        # echo "        a_tag['target'] = '_blank'" >> modify_links.py
+        echo "" >> modify_links.py
+        echo "    # 以 UTF-8 编码写回修改后的 HTML 文件" >> modify_links.py
+        echo "    with open(file_path, 'w', encoding='utf-8') as f:" >> modify_links.py
+        echo "        f.write(str(soup))" >> modify_links.py
+        echo "" >> modify_links.py
+        echo "    print(f'Successfully updated links in {file_path} to {target_url}')" >> modify_links.py
+        echo "" >> modify_links.py
+        echo "except FileNotFoundError:" >> modify_links.py
+        echo "    print(f'Error: {file_path} not found.')" >> modify_links.py
+        echo "    sys.exit(1)" >> modify_links.py
+        echo "except Exception as e:" >> modify_links.py
+        echo "    print(f'An error occurred: {e}')" >> modify_links.py
+        echo "    sys.exit(1)" >> modify_links.py
+
+
+    - name: 执行链接修改脚本
+      # 运行刚刚创建的 Python 脚本文件
+      run: python modify_links.py
+
     - name: 自动提交并推送 changes 到 docs/index.html
       # 使用 stefanzweifel/git-auto-commit-action@v5 自动提交生成的 index.html 文件
       uses: stefanzweifel/git-auto-commit-action@v5
       with:
         # 提交消息
-        commit_message: Sync README.md to docs/index.html
+        commit_message: Sync README.md to docs/index.html and updated links
         # 指定要提交的文件，现在是 docs/index.html
         files: docs/index.html
         # 可选：设置提交作者信息
