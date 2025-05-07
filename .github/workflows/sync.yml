@@ -6,17 +6,27 @@ on:
 jobs:
   sync:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # 必须添加，否则无法获取文件历史
+
       - name: Generate index.html
         run: |
-          # 提取README内容并生成HTML
-          awk '/^智脑时代周刊/{p=1} p' README.md | \
-          sed 's/^# /<h1>/; s/## /<h2>/; s/### /<h3>/; s/$/<\/h1><\/h2><\/h3>/' | \
-          sed 's/^- /<li>/; s/$/<\/li>/' > docs/index.html
+          # 确保从根目录读取README.md
+          cat README.md | awk '
+            BEGIN { print "<!DOCTYPE html><html><head><title>智脑时代周刊</title></head><body>" }
+            /^智脑时代周刊/ { print "<h1>" $0 "</h1>"; next }
+            /^## / { sub(/^## /, "<h2>"); print $0 "</h2>"; next }
+            /^- / { sub(/^- /, "<li>"); print $0 "</li>"; next }
+            END { print "</body></html>" }
+          ' > docs/index.html
+
       - name: Commit changes
         run: |
-          git config --global user.name "Automated Sync"
+          git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
           git add docs/index.html
           git commit -m "Auto-update index.html from README.md"
