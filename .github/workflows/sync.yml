@@ -21,16 +21,15 @@ jobs:
       # 使用 actions/checkout@v4 检出仓库代码
       uses: actions/checkout@v4
 
+    - name: 安装 pandoc
+      # 使用 apt-get 在 Ubuntu 环境中安装 pandoc
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y pandoc
+
     - name: 将 README.md 转换为 index.html
       # 使用 pandoc 工具将 Markdown 文件转换为 HTML
-      # ubuntu-latest 环境通常预装了 pandoc
       run: |
-        # 确保 pandoc 已安装 (通常不需要，但如果遇到问题可以取消注释尝试安装)
-        # sudo apt-get update && sudo apt-get install -y pandoc
-
-        # 使用 pandoc 将 README.md 转换为完整的 HTML 文件
-        # -s 或 --standalone 会生成一个独立的 HTML 文件，包含必要的头部和尾部
-        # -o index.html 指定输出文件名为 index.html
         pandoc README.md -s -o index.html
 
     - name: 自动提交并推送 changes 到 index.html
