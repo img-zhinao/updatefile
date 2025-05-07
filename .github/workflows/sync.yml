@@ -1,0 +1,23 @@
+name: Sync README to Index
+on:
+  push:
+    paths:
+      - 'README.md'
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate index.html
+        run: |
+          # 提取README内容并生成HTML
+          awk '/^智脑时代周刊/{p=1} p' README.md | \
+          sed 's/^# /<h1>/; s/## /<h2>/; s/### /<h3>/; s/$/<\/h1><\/h2><\/h3>/' | \
+          sed 's/^- /<li>/; s/$/<\/li>/' > docs/index.html
+      - name: Commit changes
+        run: |
+          git config --global user.name "Automated Sync"
+          git config --global user.email "actions@github.com"
+          git add docs/index.html
+          git commit -m "Auto-update index.html from README.md"
+          git push
