@@ -13,41 +13,64 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Install Pandoc (专业Markdown转换工具)
+        run: sudo apt-get install pandoc
+
       - name: Generate index.html
         run: |
-          # 创建标准HTML框架
-          echo '<!DOCTYPE html>
-          <html>
-          <head>
-            <title>智脑时代周刊</title>
-            <style>
-              body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
-              h1 { color: #333; border-bottom: 1px solid #eee; padding-bottom: 10px; }
-              .month { margin-top: 20px; }
-              .month h2 { color: #0366d6; font-size: 1.2em; }
-              ul { padding-left: 25px; }
-              li { list-style-type: "• "; margin-bottom: 5px; }
-              a { color: #0366d6; text-decoration: none; }
-              a:hover { text-decoration: underline; }
-            </style>
-          </head>
-          <body>
-            <h1>智脑时代周刊</h1>' > docs/index.html
+          # 生成完整HTML框架（严格匹配截图风格）
+          pandoc README.md -f markdown -t html \
+            --template='
+            <!DOCTYPE html>
+            <html>
+            <head>
+              <title>智脑时代周刊</title>
+              <style>
+                body { 
+                  font-family: -apple-system, sans-serif;
+                  max-width: 800px;
+                  margin: 0 auto;
+                  padding: 20px;
+                  background: white;
+                }
+                h1 { 
+                  color: black;
+                  text-align: center;
+                  border-bottom: none;
+                }
+                h2 {
+                  color: #0366d6;
+                  font-size: 1.2em;
+                  margin-top: 1.5em;
+                }
+                ul {
+                  padding-left: 1.5em;
+                }
+                li {
+                  list-style-type: "• ";
+                  margin-bottom: 0.5em;
+                }
+                a {
+                  color: #0366d6;
+                  text-decoration: none;
+                }
+              </style>
+            </head>
+            <body>
+              <h1>智脑时代周刊</h1>
+              {{ content }}
+            </body>
+            </html>
+            ' \
+            -o docs/index.html
 
-          # 提取README内容并转换
-          awk '/^## 2025/{gsub(/## /, "<div class=\"month\"><h2>"); print $0 "</h2><ul>"}
-               /^- /{gsub(/- /, "<li><a href=\""); 
-                    gsub(/$/, "\">"); 
-                    gsub(/$/, "</a></li>");
-                    print $0}' README.md >> docs/index.html
-
-          # 闭合HTML标签
-          echo '</ul></div></body></html>' >> docs/index.html
+          # 修复链接格式（确保与README.md完全一致）
+          sed -i 's|<a href="$.*$">|<a href="\1" target="_blank">|g' docs/index.html
 
       - name: Commit changes
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
           git add docs/index.html
-          git commit -m "Auto-update index.html from README.md"
+          git commit -m "Auto-sync README.md to index.html"
           git push
