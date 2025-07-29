@@ -18,7 +18,7 @@
 
 - 第 73 期: [苏州AI时代科创园：数据驱动的招商智能体](weekly_reports/第73期_苏州AI时代科创园：数据驱动的招商智能体.md)
 
-- 第 72 期: [n8n 使用 Firecrawl 抓取网站内容](weekly_reports/第72期_n8n 使用 Firecrawl 抓取网站内容.md)
+- 第 72 期: [n8n 使用 Firecrawl 抓取网站内容](weekly_reports/第72期_n8n使用Firecrawl抓取网站内容.md)
 
 - 第 71 期: [FIRECRAWL.DEV中国使用研究](weekly_reports/第71期_FIRECRAWL.DEV中国使用研究.md)
 
